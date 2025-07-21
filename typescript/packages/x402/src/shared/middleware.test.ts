@@ -260,7 +260,7 @@ describe("getDefaultAsset", () => {
     const result = getDefaultAsset("sei-testnet");
 
     expect(result).toEqual({
-      address: "0xeAcd10aaA6f362a94823df6BBC3C536841870772",
+      address: "0x4fcf1784b31630811181f670aea7a7bef803eaed",
       decimals: 6,
       eip712: {
         name: "USDC",
@@ -273,7 +273,7 @@ describe("getDefaultAsset", () => {
     const result = getDefaultAsset("sei");
 
     expect(result).toEqual({
-      address: "0x3894085Ef7Ff0f0aeDf52E2A2704928d1Ec074F1",
+      address: "0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392",
       decimals: 6,
       eip712: {
         name: "USDC",

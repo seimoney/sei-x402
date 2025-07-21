@@ -1,4 +1,7 @@
-from typing import Callable, Optional, TypedDict
+from typing import Callable, Optional
+from typing_extensions import (
+    TypedDict,
+)  # use `typing_extensions.TypedDict` instead of `typing.TypedDict` on Python < 3.12
 import httpx
 from x402.types import (
     PaymentPayload,
@@ -51,7 +54,7 @@ class FacilitatorClient:
                     "x402Version": payment.x402_version,
                     "paymentPayload": payment.model_dump(by_alias=True),
                     "paymentRequirements": payment_requirements.model_dump(
-                        by_alias=True
+                        by_alias=True, exclude_none=True
                     ),
                 },
                 headers=headers,
@@ -77,7 +80,7 @@ class FacilitatorClient:
                     "x402Version": payment.x402_version,
                     "paymentPayload": payment.model_dump(by_alias=True),
                     "paymentRequirements": payment_requirements.model_dump(
-                        by_alias=True
+                        by_alias=True, exclude_none=True
                     ),
                 },
                 headers=headers,

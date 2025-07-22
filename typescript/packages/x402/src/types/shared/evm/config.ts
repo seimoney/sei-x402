@@ -22,13 +22,11 @@ export const config: Record<string, ChainConfig> = {
     usdcName: "Bridged USDC",
   },
   "1328": {
-    usdcAddress: "0xeAcd10aaA6f362a94823df6BBC3C536841870772",
+    usdcAddress: "0x4fcf1784b31630811181f670aea7a7bef803eaed",
     usdcName: "USDC",
   },
   "1329": {
-    // This USDC is an IBC Bridged one and does not support EIP3009
-    // TODO: Substitute with a native USDC when available
-    usdcAddress: "0x3894085Ef7Ff0f0aeDf52E2A2704928d1Ec074F1",
+    usdcAddress: "0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392",
     usdcName: "USDC",
   },
 };
